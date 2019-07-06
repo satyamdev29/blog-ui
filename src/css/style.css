@@ -20,3 +20,26 @@
     color:#fff;
     padding:2rem;
 }
+.blog_ui_logo{
+    color:#fff;
+}
+.blog_ui_logo_text{
+    font-size: 1.4rem;
+    padding: .1rem 1rem;
+    display:inline-block;
+    border:1px solid #17a2b8 ;
+    background:#17a2b8 ;
+    border-radius: 20px;
+    text-shadow: 2px 2px #000;
+}
+.contactHero{
+    background: #666;
+    min-height: 200px;
+    color:#fff;
+}
+.contactHero h2{
+    color: #fff;
+}
+.contactHero_wrapper{
+    padding: 5rem;
+}
