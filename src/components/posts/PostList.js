@@ -65,6 +65,7 @@ class PostList extends React.Component {
                         <div>
                             { this.state.posts.slice(0, this.state.postLimit).map(post => {
                             return <PostItem 
+                            key={post.id}
                             title={post.title} 
                             body={post.body} 
                             id={post.userId}
