@@ -55,7 +55,7 @@ class PostList extends React.Component {
     render(){
         return(
             <React.Fragment>
-                <PostHero />
+                <PostHero headerTitle={'Blogs List'} />
                 <div className="container mt-4 mb-4">
                 <h2>Read Posts</h2>
                 <div className="row">

@@ -7,9 +7,9 @@ const PostItem = (props) => {
         <div className="row no-gutters">
             <div className="col-md-8">
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+                    <h5 className="card-title"><Link to={`/posts/${id}`}>{title}</Link></h5>
                     <p className="card-text">{body}</p>
-                    <Link to={`posts/${id}`} className="btn btn-secondary"> Read More </Link>                    
+                    <Link to={`/posts/${id}`}><span className="btn btn-secondary">Read More</span> </Link>                    
                 </div>
             </div>
             <div className="col-md-4">
