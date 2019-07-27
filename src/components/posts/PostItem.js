@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 const PostItem = (props) => {
-    const { id, title, body } = props
+    const { id, title, body, img } = props
     return (
-    <div className="card mb-3" style={{maxWidth:'450px'}}>
+    <div className="card mb-3" style={{maxWidth:'450px'}} key={id}>
         <div className="row no-gutters">
             <div className="col-md-8">
                 <div className="card-body">
@@ -13,7 +13,7 @@ const PostItem = (props) => {
                 </div>
             </div>
             <div className="col-md-4">
-                <img src="http://lorempixel.com/200/350/" className="card-img" alt={title} />
+                <img src={img} className="card-img" alt={title} />
             </div>
             </div>
         </div>

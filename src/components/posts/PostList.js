@@ -20,12 +20,12 @@ class PostList extends React.Component {
 
     loadMoreHandle = () => {
         this.setState((prevState) => ({
-            postLimitLoaded: prevState.postLimitLoaded = false
+            postLimitLoaded: false
         }))
         setTimeout(() => {
             this.setState((prevState) => ({
                 postLimit: prevState.postLimit + 6,
-                postLimitLoaded: prevState.postLimitLoaded = true
+                postLimitLoaded: true
             }))
         },300)
     }
@@ -63,12 +63,13 @@ class PostList extends React.Component {
                     {
                         this.state.isLoaded?(
                         <div>
-                            { this.state.posts.slice(0, this.state.postLimit).map(post => {
+                            { this.state.filteredPosts.slice(0, this.state.postLimit).map((post,index) => {
                             return <PostItem 
                             key={post.id}
                             title={post.title} 
                             body={post.body} 
                             id={post.userId}
+                            img={`http://lorempixel.com/${200+index}/${350+index}/`}
                             />
                         })}
                         {
@@ -97,11 +98,13 @@ class PostList extends React.Component {
                         </form>
                     </div>
                         <h3>Recent Post</h3>
-                    { this.state.posts.slice(-3).map(post => {
+                    { this.state.posts.slice(-3).map((post,index) => {
                             return <PostItem 
+                            key={post.id}
                             title={post.title} 
                             body={post.body} 
                             id={post.userId}
+                            img={`http://lorempixel.com/${200+index}/${350+index}/`}
                             />
                         })}
                     
